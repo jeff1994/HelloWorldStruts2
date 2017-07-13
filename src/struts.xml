@@ -7,6 +7,8 @@
     <constant name="struts.devMode" value="true"/>
     <package name="person" extends="struts-default">
             <action name="submitname" class="com.jeff.Person" method="helloworld">
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="timer" />
                 <result name="success">/index.jsp</result>
                 <result name="error">/error.jsp</result>
             </action>
